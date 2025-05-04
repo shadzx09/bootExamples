@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ticket Form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Ticket Booking Form</h1>
+    <nav>
+      <a href="index.html">Search Buses</a> |
+      <a href="profile.html">My Profile</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="ticket-form-section">
+      <form id="ticket-form" enctype="multipart/form-data">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div>
+          <label for="passenger-type">Passenger Type:</label>
+          <select id="passenger-type" name="passenger_type" required>
+            <option value="Regular">Regular</option>
+            <option value="PWD/Senior Citizen">PWD/Senior Citizen</option>
+            <option value="Student">Student</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="seat-number">Seat Number:</label>
+          <input type="text" id="seat-number" name="seat_number" readonly required />
+          <button type="button" id="select-seat-btn">Select Seat</button>
+        </div>
+
+        <div id="id-upload-container" style="display:none;">
+          <label for="id-upload">Upload Valid ID:</label>
+          <input type="file" id="id-upload" name="id_upload" accept="image/*,application/pdf" />
+        </div>
+
+        <div>
+          <label for="remarks">Remarks (optional):</label>
+          <textarea id="remarks" name="remarks"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Seat selection modal -->
+    <div id="seat-modal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close" id="close-seat-modal">&times;</span>
+        <h3>Select a Seat</h3>
+        <div id="seat-map"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Bus Reservation System</p>
+  </footer>
+</body>
+</html>
