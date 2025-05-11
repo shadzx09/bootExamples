@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'SAMPLE_BUSDB';
+$dbname = 'busreferencedb';
 $user = 'root';
 $password = '';
 
